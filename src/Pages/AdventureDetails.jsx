@@ -62,6 +62,9 @@ const AdventureDetails = () => {
           </div>
           <div className="badge badge-outline badge-info">Duration: {duration}</div>
         </div>
+        <div className="text-center">
+            <button onClick={()=>document.getElementById('my_modal_3').showModal()} className="btn bg-orange-600 text-white">Talk with Expert</button>
+            </div>
       </div>
     </div>
   );
