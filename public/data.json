@@ -2,7 +2,7 @@
     {
       "id": 1,
       "title": "Amazon Rainforest Expedition",
-      "image": "https://example.com/images/amazon.jpg",
+      "image": "https://i.ibb.co.com/BHVRv12F/img1.jpg",
       "category": "Jungle Trekking",
       "short_description": "Explore the heart of the Amazon Rainforest, encountering wildlife and indigenous cultures.",
       "cost": 1200,
@@ -18,7 +18,7 @@
     {
       "id": 2,
       "title": "Glacier Hiking in Iceland",
-      "image": "https://example.com/images/iceland.jpg",
+      "image": "https://i.ibb.co.com/bMtDFjzh/img2.jpg",
       "category": "Glacier Adventure",
       "short_description": "Hike across stunning glaciers while learning about climate change and ice formations.",
       "cost": 850,
@@ -34,7 +34,7 @@
     {
       "id": 3,
       "title": "Great Barrier Reef Diving",
-      "image": "https://example.com/images/reef.jpg",
+      "image": "https://i.ibb.co.com/1GHFxr9k/img3.jpg",
       "category": "Scuba Diving",
       "short_description": "Experience the vibrant marine life and coral reefs while supporting conservation efforts.",
       "cost": 1500,
@@ -50,7 +50,7 @@
     {
       "id": 4,
       "title": "Safari in Serengeti",
-      "image": "https://example.com/images/safari.jpg",
+      "image": "https://i.ibb.co.com/CfC7YQq/img4.jpg",
       "category": "Wildlife Safari",
       "short_description": "Witness the Great Migration and diverse wildlife in a responsible, eco-friendly safari.",
       "cost": 2500,
@@ -66,7 +66,7 @@
     {
       "id": 5,
       "title": "Himalayan Trek to Everest Base Camp",
-      "image": "https://example.com/images/everest.jpg",
+      "image": "https://i.ibb.co.com/rRvnZz1h/img5.jpg",
       "category": "Mountain Trekking",
       "short_description": "A breathtaking trek through the Himalayas, reaching the iconic Everest Base Camp.",
       "cost": 1800,
@@ -82,7 +82,7 @@
     {
       "id": 6,
       "title": "Kayaking in the Norwegian Fjords",
-      "image": "https://example.com/images/fjords.jpg",
+      "image": "https://i.ibb.co.com/xKTh3cjy/img6.jpg",
       "category": "Water Adventure",
       "short_description": "Paddle through breathtaking fjords surrounded by waterfalls and wildlife.",
       "cost": 1100,
@@ -98,7 +98,7 @@
     {
       "id": 7,
       "title": "Machu Picchu Inca Trail",
-      "image": "https://example.com/images/machu.jpg",
+      "image": "https://i.ibb.co.com/NgzWfrMh/img7.jpg",
       "category": "Cultural Trek",
       "short_description": "Follow the ancient Inca Trail to the majestic Machu Picchu ruins.",
       "cost": 1300,
@@ -114,7 +114,7 @@
     {
         "id": 8,
         "title": "Amazon Rainforest Expedition",
-        "image": "https://example.com/images/amazon.jpg",
+        "image": "https://i.ibb.co.com/5XZ4qkgL/img8.jpg",
         "category": "Jungle Trekking",
         "short_description": "Explore the heart of the Amazon Rainforest, encountering wildlife and indigenous cultures.",
         "cost": 1200,
@@ -130,7 +130,7 @@
       {
         "id": 9,
         "title": "Glacier Hiking in Iceland",
-        "image": "https://example.com/images/iceland.jpg",
+        "image": "https://i.ibb.co.com/0Pgd2Dj/img9.jpg",
         "category": "Glacier Adventure",
         "short_description": "Hike across stunning glaciers while learning about climate change and ice formations.",
         "cost": 850,
@@ -146,7 +146,7 @@
       {
         "id": 10,
         "title": "Great Barrier Reef Diving",
-        "image": "https://example.com/images/reef.jpg",
+        "image": "https://i.ibb.co.com/fVtpqym5/img10.jpg",
         "category": "Scuba Diving",
         "short_description": "Experience the vibrant marine life and coral reefs while supporting conservation efforts.",
         "cost": 1500,
@@ -162,7 +162,7 @@
       {
         "id": 11,
         "title": "Safari in Serengeti",
-        "image": "https://example.com/images/safari.jpg",
+        "image": "https://i.ibb.co.com/0yZB4t94/img11.jpg",
         "category": "Wildlife Safari",
         "short_description": "Witness the Great Migration and diverse wildlife in a responsible, eco-friendly safari.",
         "cost": 2500,
@@ -178,7 +178,7 @@
       {
         "id": 12,
         "title": "Himalayan Trek to Everest Base Camp",
-        "image": "https://example.com/images/everest.jpg",
+        "image": "https://i.ibb.co.com/BHvFGXLS/img12.jpg",
         "category": "Mountain Trekking",
         "short_description": "A breathtaking trek through the Himalayas, reaching the iconic Everest Base Camp.",
         "cost": 1800,

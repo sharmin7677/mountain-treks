@@ -16,7 +16,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path:"/",
-                element: <Home/>
+                element: <Home/>,
+                loader:() => fetch("/data.json")
             },
             {
                 path:"/login",
@@ -35,8 +36,14 @@ const router = createBrowserRouter([
                 element:<Profile/>
             },
             {
-                path: "/adventure",
-                element: <AdventureDetails/>
+                path: "/adventure/:id",
+                element: <AdventureDetails />,
+                loader: async ({ params }) => {
+                    const res = await fetch("/data.json"); 
+                    const data = await res.json();
+                    const adventure = data.find(adventure => adventure.id ==(params.id));
+                    return adventure || {}; 
+                }
             }
         ]
     }
