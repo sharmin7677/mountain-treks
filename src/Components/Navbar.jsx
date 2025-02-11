@@ -30,7 +30,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar fixed z-10 bg-base-100 w-11/12 mx-auto">
+    <div className="navbar backdrop-blur-md sticky top-0 z-20  bg-transparent  ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -57,7 +57,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex items-center gap-2">
-              <img src={logo} alt="Logo" className="w-30 " />
+              <img src={logo} alt="Logo" className= "w-10 rounded-full" />
               <h2 className="text-xl font-bold">EVERHIKE</h2>
             </div>
       </div>
