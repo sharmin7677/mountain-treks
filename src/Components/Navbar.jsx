@@ -15,16 +15,16 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/" className={({ isActive }) => isActive ? "text-red-500 font-bold" : ""}>Home</NavLink>
       </li>
       <li>
-        <NavLink to="/updateProfile">Update Profile</NavLink>
+        <NavLink className={({ isActive }) => isActive ? "text-red-500 font-bold" : ""} to="/updateProfile">Update Profile</NavLink>
       </li>
       <li>
-        <NavLink to="/profile">Profile</NavLink>
+        <NavLink className={({ isActive }) => isActive ? "text-red-500 font-bold" : ""} to="/profile">Profile</NavLink>
       </li>
       <li>
-        <NavLink to="/adventure">Adventure Details</NavLink>
+        <NavLink className={({ isActive }) => isActive ? "text-red-500 font-bold" : ""} to="/adventure">Adventure Details</NavLink>
       </li>
     </>
   );

@@ -1,18 +1,16 @@
 
 
-const Modal = () => {
-    return (
-        <dialog id="my_modal_3" className="modal">
-        <div className="modal-box">
-          <form method="dialog">
-            {/* if there is a button in form, it will close the modal */}
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-          </form>
-          <h3 className="font-bold text-lg">Hello!</h3>
-          <p className="py-4">Press ESC key or click on ✕ button to close</p>
+const Modal = () => (
+    <dialog id="my_modal_3" className="modal">
+      <form method="dialog" className="modal-box">
+        <h2 className="font-bold">Consultation Time</h2>
+        <p>Our consultation time is between 10:00 AM and 8:00 PM.</p>
+        <div className="modal-action">
+          <button className="btn">Close</button>
         </div>
-      </dialog>
-    );
-};
+      </form>
+    </dialog>
+  );
 
-export default Modal;
+  export default Modal;
+  

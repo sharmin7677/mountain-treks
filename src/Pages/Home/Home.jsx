@@ -1,8 +1,9 @@
-import { useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import AdventureCard from "./AdventureCard";
 import Testimonials from "./Testimonials";
 import Gallery from "./Gallery";
+import SectionTitle from "../../Components/SectionTitle";
 
 
 const Home = () => {
@@ -11,12 +12,21 @@ const Home = () => {
     return (
         <div >
            <Banner/>
+
            {/* adventure experience section */}
-           <div className="grid md:grid-cols-4 gap-6 mb-4">
+          <section>
+            <SectionTitle
+                heading={"Adventure Experience"}
+            />
+          <div className="grid md:grid-cols-4 gap-6 mb-4">
             {
-                adventuresData.map(adventure=><AdventureCard key={adventuresData.id} adventure={adventure}/>)
+                adventuresData.slice(0,8).map(adventure=><AdventureCard key={adventuresData.id} adventure={adventure}/>)
             }
            </div>
+           <div className="text-center">
+           <NavLink to={"/adventure"} className="btn bg-red-500 text-white ">Explore Now</NavLink>
+           </div>
+          </section>
            
            <div className="mb-6">
            <Testimonials testimonialsData={testimonialsData}/>

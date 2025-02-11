@@ -4,40 +4,53 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
+import SectionTitle from "../../Components/SectionTitle";
 
 const Testimonials = ({ testimonialsData }) => {
   return (
-    <div className="w-full flex justify-center ">
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        pagination={{ clickable: true }}
-        modules={[Autoplay, Pagination]}
-        className="w-full max-w-4xl"
-      >
-        {testimonialsData.map((testimonial, index) => {
-          const { name, image, review, rating } = testimonial;
-          return (
-            <SwiperSlide key={index} className=" bg-gray-200 p-6 text-center  shadow-xl rounded-xl">
-              <div className="flex flex-col items-center">
-                <div className="avatar">
-                  <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                    <img src={image} alt={name} />
+    <section>
+      <SectionTitle
+        heading={"What The Say About Hikker"}
+        subHeading={
+          "Discover the experiences of our satisfied customers and their feedback on Hikker's services"
+        }
+      />
+
+      <div className="w-full flex justify-center ">
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          modules={[Autoplay, Pagination]}
+          className="w-full max-w-4xl"
+        >
+          {testimonialsData.map((testimonial, index) => {
+            const { name, image, review, rating } = testimonial;
+            return (
+              <SwiperSlide
+                key={index}
+                className=" bg-gray-200 p-6 text-center  shadow-xl rounded-xl"
+              >
+                <div className="flex flex-col items-center">
+                  <div className="avatar">
+                    <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                      <img src={image} alt={name} />
+                    </div>
+                  </div>
+                  <h2 className="mt-4 text-xl font-semibold">{name}</h2>
+                  <p className="mt-2 text-gray-500 italic">"{review}"</p>
+
+                  <div className="mt-2">
+                    <Rating style={{ maxWidth: 250 }} value={rating} />
                   </div>
                 </div>
-                <h2 className="mt-4 text-xl font-semibold">{name}</h2>
-                <p className="mt-2 text-gray-500 italic">"{review}"</p>
-                
-                <div className="mt-2">
-                <Rating style={{ maxWidth: 250 }} value={rating}  />
-                </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-    </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
+    </section>
   );
 };
 
