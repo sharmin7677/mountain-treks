@@ -15,14 +15,14 @@ const Profile = () => {
     <div className="max-w-3xl mt-28 mx-auto p-6 bg-white shadow-lg rounded-lg text-center">
 
 
-      <h2 className="text-2xl font-bold text-gray-800">Welcome, {user.name}!</h2>
+      <h2 className="text-2xl font-bold text-gray-800">Welcome, {user?.displayName}!</h2>
       <div className="mt-6">
         <img
-          src={user.image || "https://via.placeholder.com/150"}
+          src={user?.photoURL|| "https://via.placeholder.com/150"}
           alt="Profile"
           className="w-32 h-32 mx-auto rounded-full border-4 border-gray-300"
         />
-        <p className="text-lg font-medium mt-3">Name: {user.name}</p>
+        <p className="text-lg font-medium mt-3">Name: {user?.displayName}</p>
         <p className="text-lg font-medium">Email: {user.email}</p>
       </div>
 

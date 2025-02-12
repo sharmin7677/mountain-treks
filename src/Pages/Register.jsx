@@ -5,7 +5,7 @@ import { updateProfile } from "firebase/auth";
 
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser, updateUser} = useContext(AuthContext);
     const [error, setError] = useState("");
 
   const handleRegister = (e) => {
@@ -16,27 +16,39 @@ const Register = () => {
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, photo, email, password);
+    if(!/[a-z]/.test(password)){
+      setError("Password must have a Lowercase lette")
+      return;
+    }
+    if(!/[A-Z]/.test(password)){
+      setError("Password must have an Uppercase lette")
+      return;
+    }
+    if(password.length < 6) {
+      setError("Password must be at least 6 character")
+      return;
+    }
 
 // create user
     createUser(email, password)
-    .then (result =>{
-        const user = result.user
+    .then (res =>{
+      updateUser(name, photo)
+        // const user = result.user
 
-          // Update user profile
-          updateProfile(user, {
-            displayName: name,
-            photoURL: photo,
-          })
-            .then(() => {
-              console.log("User profile updated:", user);
-            })
-            .catch((err) => {
-              console.log("Error updating profile:", err.message);
-              setError("Failed to update profile");
-            });
+          // // Update user profile
+          // updateProfile(user, {
+          //   displayName: name,
+          //   photoURL: photo,
+          // })
+          //   .then(() => {
+          //     console.log("User profile updated:", user);
+          //   })
+          //   .catch((err) => {
+          //     console.log("Error updating profile:", err.message);
+          //     setError("Failed to update profile");
+          //   });
   
-          console.log("User created:", user);
+          // console.log("User created:", user);
     })
     .catch(err =>{
         console.log('ERROR', err.message)
