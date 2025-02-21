@@ -9,8 +9,8 @@ import SectionTitle from "../../Components/SectionTitle";
 const Gallery = () => {
   return (
     <section>
-      <SectionTitle
-        heading={"Gallery Of Our Tours"}
+      <SectionTitle 
+        heading={"Gallery Of Our Tours"} className={"animate__animated animate__bounce"}
         subHeading={
           "Explore stunning moments from our tours captured in beautiful images, showcasing unforgettable experiences and destinations"
         }

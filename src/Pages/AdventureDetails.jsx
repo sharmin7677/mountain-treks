@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import AllCard from "./Home/AllCard";
 import Modal from "./Home/Modal";
 import moment from "moment";
+import { Helmet } from "react-helmet-async";
 
 const AdventureDetails = () => {
   const adventures = useLoaderData();
@@ -20,7 +21,11 @@ const AdventureDetails = () => {
     };
 
   return (
-    <div>
+   <>
+   <Helmet>
+        <title>Adventure Details | Everhike</title>
+       </Helmet>
+     <div>
       <div className="grid md:grid-cols-4 gap-6 mb-4">
       {adventures.map((adventure) => (
         <AllCard key={adventure.id} adventure={adventure} />
@@ -34,6 +39,7 @@ const AdventureDetails = () => {
     </button>
   </div>
     </div>
+   </>
   );
 };
 

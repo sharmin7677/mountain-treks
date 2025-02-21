@@ -1,6 +1,8 @@
 import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa"; // Importing icons
+import { FaFacebook } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png"
+import { TbTarget } from "react-icons/tb";
 
 const Footer = () => {
   return (
@@ -18,11 +20,14 @@ const Footer = () => {
             </p>
             <div className="mt-4 space-y-2">
               <p className="flex items-center gap-2">
-                <FaMapMarkerAlt className="text-orange-500" /> Jl. Raya Ubud No.88, Bali - 80571
+                <FaMapMarkerAlt className="text-orange-500" /> Bijonagar, Dhaka-1100
               </p>
               <p className="flex items-center gap-2">
                 <FaEnvelope className="text-orange-500" /> support@domain.com
               </p>
+              <Link to="https://www.facebook.com/profile.php?id=61550562791832" target="_blank">
+              <FaFacebook />
+              </Link>
             </div>
           </div>
 

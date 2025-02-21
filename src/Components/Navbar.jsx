@@ -2,14 +2,27 @@ import { useContext } from "react";
 import logo from "../assets/logo.png"
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
 
   const handleLogout = () => {
     signOutUser()
-      .then(() => console.log("User logged out"))
-      .catch((error) => console.log("Logout Error:", error.message));
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Logged Out",
+          text: "You have successfully logged out.",
+        });
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Logout Failed",
+          text: error.message,
+        });
+      });
   };
 
   const links = (
@@ -80,12 +93,12 @@ const Navbar = () => {
             </div>
 
             {/* Logout Button */}
-            <button onClick={handleLogout} className="btn btn-error text-white">
+            <button onClick={handleLogout} className="btn bg-red-500 text-white">
               Logout
             </button>
           </div>
         ) : (
-          <Link to="/login" className="btn btn-primary">
+          <Link to="/login" className="btn bg-red-500 text-white">
             Login
           </Link>
         )}

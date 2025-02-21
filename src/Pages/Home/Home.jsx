@@ -4,13 +4,18 @@ import AdventureCard from "./AdventureCard";
 import Testimonials from "./Testimonials";
 import Gallery from "./Gallery";
 import SectionTitle from "../../Components/SectionTitle";
+import { Helmet } from "react-helmet-async";
 
 
 const Home = () => {
     const adventures = useLoaderData();
     const {adventuresData, testimonialsData} = adventures
     return (
-        <div >
+       <>
+       <Helmet>
+        <title>Home | Everhike</title>
+       </Helmet>
+         <div >
            <Banner/>
 
            {/* adventure experience section */}
@@ -35,6 +40,7 @@ const Home = () => {
            <Gallery/>
            </div>
         </div>
+       </>
     );
 };
 

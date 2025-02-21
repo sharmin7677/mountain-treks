@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
-import { updateProfile } from "firebase/auth";
+import Swal from "sweetalert2";
 
 const Register = () => {
 
@@ -33,25 +33,14 @@ const Register = () => {
     createUser(email, password)
     .then (res =>{
       updateUser(name, photo)
-        // const user = result.user
-
-          // // Update user profile
-          // updateProfile(user, {
-          //   displayName: name,
-          //   photoURL: photo,
-          // })
-          //   .then(() => {
-          //     console.log("User profile updated:", user);
-          //   })
-          //   .catch((err) => {
-          //     console.log("Error updating profile:", err.message);
-          //     setError("Failed to update profile");
-          //   });
-  
-          // console.log("User created:", user);
+      
     })
     .catch(err =>{
-        console.log('ERROR', err.message)
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: err.message,
+      });
     })
 
     

@@ -7,6 +7,7 @@ import UpdateProfile from "../Pages/UpdateProfile";
 import Profile from "../Pages/Profile";
 import AdventureDetails from "../Pages/AdventureDetails";
 import PrivateRoute from "./PrivateRoute";
+import NotFound from "../Pages/NotFound";
 
 
 
@@ -42,19 +43,20 @@ const router = createBrowserRouter([
             },
             {
                 path:"/profile",
-                element:<Profile/>
+                element:<PrivateRoute><Profile/></PrivateRoute>
             },
             {
                 path: "/adventure",
                 element: <PrivateRoute><AdventureDetails /></PrivateRoute>,
                 loader:()=> fetch("/data.json")
                 
-            },
-            {
-                path: "*",
-                element: <Navigate to="/" />
             }
+           
         ]
+    },
+    {
+        path: "*",
+        element: <NotFound/>
     }
 ])
     
