@@ -1,5 +1,6 @@
 import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa"; // Importing icons
 import { FaFacebook } from "react-icons/fa6";
+import { IoLogoYoutube } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png"
 import { FaGithub } from "react-icons/fa";
@@ -16,22 +17,24 @@ const Footer = () => {
               <h2 className="text-xl font-bold">EVERHIKE</h2>
             </div>
             <p className="text-gray-400 mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+            Explore breathtaking trails and embark on unforgettable hiking adventures with Hikker – your trusted companion for trekking experiences.
             </p>
             <div className="mt-4 space-y-2">
               <p className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-orange-500" /> Bijonagar, Dhaka-1100
               </p>
               <p className="flex items-center gap-2">
-                <FaEnvelope className="text-orange-500" /> support@domain.com
+                <FaEnvelope className="text-orange-500" /> orthi7677@gmail.com
               </p>
              <div className="flex gap-4 ">
-             <Link to="https://www.facebook.com/profile.php?id=61550562791832" target="_blank">
+             <Link className="text-2xl" to="https://www.facebook.com/profile.php?id=61550562791832" target="_blank">
               <FaFacebook />
               </Link>
-              <Link to="https://github.com/sharmin7677" target="_blank">
+              <Link className="text-2xl" to="https://github.com/sharmin7677" target="_blank">
               <FaGithub />
               </Link>
+              <Link className="text-2xl" to="https://www.youtube.com/@Orthi77" target="_blank">
+              <IoLogoYoutube /></Link>
              </div>
             </div>
           </div>
@@ -69,8 +72,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Text */}
-        <div className="mt-10 text-center text-gray-500 text-sm">
-          Hiking & Trekking Mountain Template Kit by Jegtheme
+        <div className="mt-10 flex justify-between text-gray-300 text-sm">
+          <p>Hiking & Trekking Mountain Template Kit by Orthi</p>
+          <p>Copyright © {new Date().getFullYear()}. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
