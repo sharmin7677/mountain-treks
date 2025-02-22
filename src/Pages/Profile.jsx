@@ -8,7 +8,7 @@ const Profile = () => {
   const navigate = useNavigate();
 
   if (!user) {
-    return <p>Loading...</p>;
+    return <span className="loading loading-bars loading-lg"></span>;
   }
 
   return (
