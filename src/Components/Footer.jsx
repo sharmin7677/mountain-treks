@@ -2,7 +2,7 @@ import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa"; // Importing icons
 import { FaFacebook } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png"
-import { TbTarget } from "react-icons/tb";
+import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -25,9 +25,14 @@ const Footer = () => {
               <p className="flex items-center gap-2">
                 <FaEnvelope className="text-orange-500" /> support@domain.com
               </p>
-              <Link to="https://www.facebook.com/profile.php?id=61550562791832" target="_blank">
+             <div className="flex gap-4 ">
+             <Link to="https://www.facebook.com/profile.php?id=61550562791832" target="_blank">
               <FaFacebook />
               </Link>
+              <Link to="https://github.com/sharmin7677" target="_blank">
+              <FaGithub />
+              </Link>
+             </div>
             </div>
           </div>
 
