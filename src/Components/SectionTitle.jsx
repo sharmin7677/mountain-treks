@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 
 const SectionTitle = ({ heading, subHeading }) => {
   useEffect(() => {
-    AOS.init({ duration: 3000 }); // Initializes AOS with a 1-second animation duration
+    AOS.init({ duration: 3000 }); 
   }, []);
 
   return (
